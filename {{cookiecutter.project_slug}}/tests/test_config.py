@@ -1,4 +1,5 @@
 """Tests for the configuration management module."""
+
 import os
 import pytest
 from unittest.mock import patch

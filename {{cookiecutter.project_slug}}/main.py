@@ -4,4 +4,4 @@ import sys
 from {{ cookiecutter.package_name }}.main import main
 
 if __name__ == "__main__":
-    sys.exit(main()) 
+    sys.exit(main())

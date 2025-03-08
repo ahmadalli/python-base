@@ -39,19 +39,19 @@ def setup_logging(config):
     log_format = config.get_config(
         "logging.format", "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
-    
+
     # Convert string log level to logging constant
     numeric_level = getattr(logging, log_level.upper(), None)
     if not isinstance(numeric_level, int):
         logger.warning(f"Invalid log level: {log_level}, defaulting to INFO")
         numeric_level = logging.INFO
-    
+
     # Configure root logger
     logging.basicConfig(
         level=numeric_level,
         format=log_format
     )
-    
+
     # Set level for external libraries
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("requests").setLevel(logging.WARNING)
@@ -63,16 +63,16 @@ def main():
 
     # Load configuration
     config = Config(args.env, args.config)
-    
+
     # Set up logging based on configuration
     setup_logging(config)
-    
+
     # Log startup information
     logger.info(f"Starting {{ cookiecutter.project_name }} in {args.env} environment")
-    
+
     # Your application code here
     # ...
-    
+
     logger.info("Application finished")
     return 0
 

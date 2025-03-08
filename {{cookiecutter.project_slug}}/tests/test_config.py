@@ -230,4 +230,4 @@ key = secret_api_key
                 config = Config()
 
                 # Test sections
-                self.assertEqual(set(config.sections()), {"database", "api"}) 
+                self.assertEqual(set(config.sections()), {"database", "api"})

@@ -37,7 +37,7 @@ db_host = config.get_config("database.host")
 api_settings = config.get_config("api")  # Returns entire section as dict
 ```
 
-## Running the Application
+## Usage
 
 You can run the application in several ways:
 
@@ -61,14 +61,6 @@ python main.py --env prod
 
 # Override configuration values
 python main.py --config database.host localhost --config api.timeout 60
-```
-
-## Usage
-
-```python
-from {{ cookiecutter.package_name }} import example
-
-# Add your usage examples here
 ```
 
 ## Development

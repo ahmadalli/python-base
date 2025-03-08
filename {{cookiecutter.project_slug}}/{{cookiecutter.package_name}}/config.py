@@ -102,4 +102,4 @@ class Config:
 
     def sections(self) -> List[str]:
         """Get all configuration sections."""
-        return self._config.sections() 
+        return self._config.sections()

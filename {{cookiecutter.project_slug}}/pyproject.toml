@@ -28,7 +28,7 @@ mypy = "^1.15.0"
 {% endif -%}
 {% if cookiecutter.use_pre_commit == 'y' -%}
 pre-commit = "^4.1.0"
-{% endif %}
+{%- endif %}
 
 [build-system]
 requires = ["poetry-core"]
@@ -39,11 +39,11 @@ build-backend = "poetry.core.masonry.api"
 line-length = 88
 target-version = ["py{{ cookiecutter.python_version.replace('.', '') }}"]
 include = '\.pyi?$'
-{% endif %}
+{%- endif %}
 
 {% if cookiecutter.use_pytest == 'y' -%}
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
-{% endif %}
+{%- endif %}

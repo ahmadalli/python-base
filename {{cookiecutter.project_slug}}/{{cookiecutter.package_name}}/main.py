@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 """Main entry point for the application."""
+
 import sys
 import argparse
 import logging
@@ -47,10 +47,7 @@ def setup_logging(config):
         numeric_level = logging.INFO
 
     # Configure root logger
-    logging.basicConfig(
-        level=numeric_level,
-        format=log_format
-    )
+    logging.basicConfig(level=numeric_level, format=log_format)
 
     # Set level for external libraries
     logging.getLogger("urllib3").setLevel(logging.WARNING)

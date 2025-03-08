@@ -1,4 +1,5 @@
 """Configuration management module."""
+
 import os
 import configparser
 from typing import Dict, Any, Optional, List, Tuple, Union

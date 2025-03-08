@@ -1,4 +1,5 @@
 """{{ cookiecutter.project_name }} package."""
+
 import logging
 
 __version__ = "0.1.0"

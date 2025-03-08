@@ -2,7 +2,7 @@
 
 import os
 import configparser
-from typing import Dict, Any, Optional, List, Tuple, Union
+from typing import Any, Optional, List, Tuple
 
 
 class Config:

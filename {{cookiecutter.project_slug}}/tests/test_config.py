@@ -83,7 +83,7 @@ def test_load_config_files(mock_read, clean_env):
         ]
 
         # Create and initialize config
-        config = Config(env="dev")
+        _ = Config(env="dev")
 
         # Check that all files were checked
         mock_exists.assert_any_call("config.ini")

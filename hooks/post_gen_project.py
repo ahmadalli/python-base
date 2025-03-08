@@ -70,6 +70,11 @@ def init_git():
             stderr=subprocess.PIPE,
         )
 
+        # Skip if .git directory exists
+        if os.path.exists(".git"):
+            print("Git repository already exists. Skipping initialization.")
+            return
+
         # Initialize git repository
         subprocess.run(["git", "init"], check=True)
 

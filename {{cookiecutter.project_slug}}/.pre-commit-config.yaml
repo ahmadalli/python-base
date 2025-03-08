@@ -1,7 +1,7 @@
 {% if cookiecutter.use_pre_commit == 'y' -%}
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -15,21 +15,21 @@ repos:
 
 {% if cookiecutter.use_black == 'y' %}
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 25.1.0
     hooks:
       - id: black
 {% endif -%}
 
 {% if cookiecutter.use_flake8 == 'y' %}
   - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+    rev: 7.1.2
     hooks:
       - id: flake8
 {% endif -%}
 
 {% if cookiecutter.use_mypy == 'y' %}
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.3.0
+    rev: v1.15.0
     hooks:
       - id: mypy
         additional_dependencies: []

@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+readme = "README.md"
+packages = [{include = "{{ cookiecutter.package_name }}"}]
+
+[tool.poetry.scripts]
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.main:main"
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+configparser = "^5.3.0"
+
+[tool.poetry.group.dev.dependencies]
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest = "^7.3.1"
+pytest-cov = "^4.1.0"
+{% endif -%}
+{% if cookiecutter.use_black == 'y' -%}
+black = "^23.3.0"
+{% endif -%}
+{% if cookiecutter.use_flake8 == 'y' -%}
+flake8 = "^6.0.0"
+{% endif -%}
+{% if cookiecutter.use_mypy == 'y' -%}
+mypy = "^1.3.0"
+{% endif -%}
+{% if cookiecutter.use_pre_commit == 'y' -%}
+pre-commit = "^3.3.2"
+{% endif -%}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+{% if cookiecutter.use_black == 'y' -%}
+[tool.black]
+line-length = 88
+target-version = ["py{{ cookiecutter.python_version.replace('.', '') }}"]
+include = '\.pyi?$'
+{% endif -%}
+
+{% if cookiecutter.use_pytest == 'y' -%}
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+{% endif -%} 

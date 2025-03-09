@@ -18,3 +18,11 @@ A Cookiecutter template for Python projects with Poetry as the package manager.
 - Python 3.7+
 - Cookiecutter (`pip install cookiecutter`)
 - Poetry (`pip install poetry`)
+
+## Usage
+
+You can use ['cruft'](https://github.com/cruft/cruft) to create a new project from this template.
+
+```bash
+cruft create https://github.com/ahmadalli/python-base
+```

@@ -65,6 +65,15 @@ python main.py --config database.host localhost --config api.timeout 60
 
 ## Development
 
+{% if cookiecutter._template and cookiecutter._commit -%}
+### Update project from template
+
+```bash
+poetry run cruft-update
+```
+
+{% endif -%}
+
 {% if cookiecutter.use_pre_commit == 'y' -%}
 ### Set up pre-commit hooks
 

@@ -71,6 +71,7 @@ python main.py --config database.host localhost --config api.timeout 60
 ```bash
 poetry run pre-commit install
 ```
+
 {% endif -%}
 
 {% if cookiecutter.use_pytest == 'y' -%}
@@ -79,6 +80,7 @@ poetry run pre-commit install
 ```bash
 poetry run pytest
 ```
+
 {% endif -%}
 
 {% if cookiecutter.use_black == 'y' -%}
@@ -87,6 +89,7 @@ poetry run pytest
 ```bash
 poetry run black .
 ```
+
 {% endif -%}
 
 {% if cookiecutter.use_flake8 == 'y' -%}
@@ -95,6 +98,7 @@ poetry run black .
 ```bash
 poetry run flake8
 ```
+
 {% endif -%}
 
 {% if cookiecutter.use_mypy == 'y' -%}
@@ -103,4 +107,5 @@ poetry run flake8
 ```bash
 poetry run mypy {{ cookiecutter.package_name }}
 ```
+
 {% endif -%}
